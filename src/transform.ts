@@ -469,13 +469,16 @@ function transform(filled: string, transformers: RegexTransformer[]): string {
   if (transformers.length === 0) {
     return filled
   }
+  let result = ''
   let transformed = filled
   for (const {target, pattern} of transformers) {
     if (pattern) {
-      transformed = transformed.replace(pattern, target)
+      //  transformed.replace(pattern, target)
+      result += transformed.match(pattern)
     }
   }
-  return transformed
+
+  return result
 }
 
 function validateTransformers(specifiedTransformers: Transformer[]): RegexTransformer[] {
