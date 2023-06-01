@@ -1,8 +1,8 @@
-name: 'Release Changelog Builder'
+name: 'Release Builder Extractor'
 description: 'A GitHub action that builds your release notes / changelog fast, easy and exactly the way you want.'
-author: 'Mike Penz'
+author: 'getshogun'
 branding:
-  icon: 'award'  
+  icon: 'award'
   color: 'green'
 inputs:
   configurationJson:
